@@ -1,0 +1,35 @@
+This is a MARC text file. These records have been exported from the Voyager catalogue because the URLs are no longer correct. The URL is in the 856 MARC field.
+
+Edit the URL in the 856 field. 
+
+Instead of the base URL being: 
+
+http://site.ebrary.com/lib/uvic/Doc?id=
+
+The URL base should be:
+http://deslibris.ca/ID/
+
+What comes after "/ID/" will depend on each record.
+
+1. It may come at the end of a "celarc" URL in a 530 field: 
+i.e. =530  \\$aAlso available in PDF form for download:$uhttp://celarc.ca/cppc/240/240827.pdf
+
+this needs to replace the current 856 field so it looks like this:
+
+=856  40$uhttp://deslibris.ca/ID/240827
+
+
+2. It may come at the end of a "deslibris" URL in a 530 field:
+i.e. =530  \\$aT{acute}el{acute}echargement disponible en PDF:$uhttp://deslibris.ca/Info/247565
+
+
+this needs to replace the current 856 field so it looks like this:
+=856  40$uhttp://deslibris.ca/ID/247565
+
+3. Delete the 530 field with either the celarc URL or the deslibris URL
+
+4. Some records will have neither of these 530 fields so the new URL can't be constructed. Those can remain unchanged.
+
+Export edited file to des_libris_records_edited.txt
+
+

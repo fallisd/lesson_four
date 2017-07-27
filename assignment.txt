@@ -1,0 +1,11 @@
+Create a script called modify_dates.py.
+
+In the script:
+
+    Read in the csv file: victorian_serial_novels_unedited.csv
+
+    Convert the dates to Extended Date Time Format (edtf) using regular expressions.
+     - Dates of the form YYYY-YYYY should become YYYY/YYYY
+     - Dates of the form MM/DD/YYYY should become YYYY-MM-DD
+     
+    Output the modified file to victorian_serial_novels_unedited.csv
